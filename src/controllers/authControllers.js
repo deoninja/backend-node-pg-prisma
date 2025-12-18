@@ -30,8 +30,7 @@ const register = async (req, res) => {
     },
   });
 
-  // generate JWT token (pseudo-code)
-  const token = generateToken(user.id, res);
+  const token = generateToken(newUser.id, res);
 
   res.status(201).json({
     status: 'success',
